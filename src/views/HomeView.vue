@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>Your most important Risks</h1>
-    <CategoryList :selectedIndex=1 />
+    <CategoryList :selectedIndex=1 :categoriesJson="CardCategoriesJson"/>
     <CardCategory v-for="category in CardCategoriesJson" :key="category.id" :categoryId=category.id :categoryName=category.name />
   </div>
 </template>

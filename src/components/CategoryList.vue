@@ -1,7 +1,7 @@
 <template>
   <div class="category-list">
     <ul>
-      <li v-for="category in categories" :key="category.id" :class="{ active: category.id === selectedIndex }" @click="clickHandler">
+      <li v-for="category in categoriesJson" :key="category.id" :class="{ active: category.id === selectedIndex }" @click="clickHandler">
         {{ category.name }}
       </li>
     </ul>
@@ -9,24 +9,26 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import categoryJson from '@/assets/categories.json'
+import { defineComponent, PropType, toRefs } from 'vue'
+
+interface CategoryJson {
+  id: number,
+  name: string
+}
 
 export default defineComponent({
   name: 'CategoryList',
   props: {
-    selectedIndex: Number
+    selectedIndex: Number,
+    categoriesJson: Object as PropType<CategoryJson[]>
   },
   setup () {
-    const categories = categoryJson
-
     function clickHandler (event: Event) {
       const categoryName: string = (event.target as HTMLUListElement).textContent ?? 'Unknown Button'
       console.log('"' + categoryName + '" category button clicked!')
     }
 
     return {
-      categories,
       clickHandler
     }
   }
