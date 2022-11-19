@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, toRefs } from 'vue'
+import { defineComponent, PropType } from 'vue'
 
 interface CategoryJson {
   id: number,
