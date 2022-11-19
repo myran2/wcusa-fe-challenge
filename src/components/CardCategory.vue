@@ -40,9 +40,9 @@ export default defineComponent({
 
     // Count up all the included Bio card types for the dot display in the Category Header.
     biometrics.forEach(bio => {
-      if (bio.addlWarning === 'Good') {
+      if (bio.intensity === 'Good') {
         goodBioCount += 1
-      } else if (bio.addlWarning === 'Stuff To Watch') {
+      } else if (bio.intensity === 'Stuff To Watch') {
         mehBioCount += 1
       } else {
         badBioCount += 1

@@ -1,7 +1,7 @@
 <template>
-  <div class="biometric-card" :class="{critical: bio.addlWarning === 'Critical'}">
+  <div class="biometric-card" :class="{critical: bio.intensity === 'Critical'}">
     <div class="card-header">
-        <span :class="bio.getRecommendedValueClassName()">{{bio.addlWarning}}</span>
+        <span :class="bio.getRecommendedValueClassName()">{{bio.intensity}}</span>
     </div>
     <div class="card-body">
         <div v-if="bio.value" class="metric-values">
@@ -35,7 +35,7 @@ interface BiometricJson {
     timeDisplay: string;
     actionLabel: string;
     categoryId: number;
-    addlWarning: string;
+    intensity: string;
 }
 
 class Biometric {
@@ -50,7 +50,7 @@ class Biometric {
     categoryId: number;
 
     // I added this field to implement the top-right warning label
-    addlWarning: string;
+    intensity: string;
 
     // this fields is inferred from other JSON values.
     recommendedLevelDiff?: number;
@@ -69,7 +69,7 @@ class Biometric {
          In this case, we need to determine if we should change the color of the number in the description.
          Realistically, this would just be an additional JSON field.
       */
-      this.addlWarning = json.addlWarning
+      this.intensity = json.intensity
       // find the first number (float or otherwise) in the description.
       const numberMatch:RegExpMatchArray|null = this.description.match('^[0-9.]+ ')
       if (numberMatch) {
@@ -83,7 +83,7 @@ class Biometric {
     }
 
     public getRecommendedValueClassName = () : string => {
-      return this.addlWarning.toLocaleLowerCase().replaceAll(' ', '-')
+      return this.intensity.toLocaleLowerCase().replaceAll(' ', '-')
     }
 }
 

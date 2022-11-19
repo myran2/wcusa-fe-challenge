@@ -8,7 +8,7 @@
         "timeDisplay": "2w",
         "actionLabel": "Take Action",
         "categoryId": 1,
-        "addlWarning": "Critical"
+        "intensity": "Critical"
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "timeDisplay": "1m",
         "actionLabel": "Take Action",
         "categoryId": 1,
-        "addlWarning": "Concern"
+        "intensity": "Concern"
     },
     {
         "id": 3,
@@ -28,7 +28,7 @@
         "timeDisplay": "1m",
         "actionLabel": "Take Action",
         "categoryId": 1,
-        "addlWarning": "Concern"
+        "intensity": "Concern"
     },
     {
         "id": 4,
@@ -38,7 +38,7 @@
         "timeDisplay": "2w",
         "actionLabel": "Take Action",
         "categoryId": 2,
-        "addlWarning": "Concern"
+        "intensity": "Concern"
     },
     {
         "id": 5,
@@ -47,7 +47,7 @@
         "timeDisplay": "1m",
         "actionLabel": "Take Action",
         "categoryId": 2,
-        "addlWarning": "Stuff To Watch"
+        "intensity": "Stuff To Watch"
     },
     {
         "id": 5,
@@ -56,6 +56,6 @@
         "timeDisplay": "1m",
         "actionLabel": "Take Action",
         "categoryId": 4,
-        "addlWarning": "Good"
+        "intensity": "Good"
     }
 ]
