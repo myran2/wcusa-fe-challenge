@@ -1,0 +1,123 @@
+.biometric-card {
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, .15);
+    margin-bottom: 25px;
+    padding: 0px 5% 2.5% 5%;
+    .card-header {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        transform: translateY(-50%);
+        right: -10%;
+
+        span {
+            padding: 5px 25px;
+            border-radius: 25px;
+            color: white;
+        }
+
+        .critical {
+            display: flex;
+            align-items: center;
+            &:before {
+                content: '';
+                display: inline-block;
+                background-color: white;
+                mask-image: url('../assets/critical.svg');
+                height: 15px;
+                width: 15px;
+                margin-right: 5px;
+            }
+        }
+
+        .critical, .concern {
+            background-color: $color-bad;
+        }
+
+        .stuff-to-watch {
+            background-color: $color-meh;
+        }
+    }
+    .card-body {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        .metric-values {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            font-weight: bolder;
+            width: 33%;
+            padding-right: 10%;
+            .value {
+                color: $color-bad;
+                font-size: 2.5em;
+            }
+            .unit {
+                color: grey;
+                font-size: .75em;
+            }
+        }
+
+        .metric-analysis {
+            display: flex;
+            flex-flow: column nowrap;
+            .metric-name {
+                font-size: 1.25em;
+                font-weight: bold;
+                margin-bottom: .25em;
+            }
+            .metric-description {
+                margin: 0;
+
+                .concern, .critical {
+                color: $color-bad;
+                }
+
+                .stuff-to-watch {
+                color: $color-meh;
+                }
+
+                .good {
+                color: $color-good;
+                }
+            }
+        }
+    }
+    .card-actions {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 5%;
+        .time-display {
+            color: rgb(1, 132, 182);
+            display: flex;
+            align-items: center;
+            width: 33%;
+            &:before {
+                content: '';
+                display: inline-block;
+                background-color: $color-blue;
+                mask-image: url('../assets/clock.svg');
+                height: 15px;
+                width: 15px;
+                margin-right: 5px;
+            }
+        }
+
+        .action-button {
+            color: white;
+            background: linear-gradient(90deg, rgb(74, 191, 223), rgb(66, 171, 199));
+            border-color: rgb(218, 239, 247);
+        }
+    }
+}
+
+.biometric-card.critical {
+    border: 3px solid $color-bad;
+}

@@ -12,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  max-width: 786px;
+  max-width: $max-app-width;
   margin: 0 auto;
 
   .home {

@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Heart Health"
+    },
+    {
+        "id": 2,
+        "name": "Body Composition"
+    },
+    {
+        "id": 3,
+        "name": "Diabetes"
+    },
+    {
+        "id": 4,
+        "name": "Tobacco Use"
+    },
+    {
+        "id": 5,
+        "name": "Alcohol"
+    },
+    {
+        "id": 6,
+        "name": "Drug Use"
+    },
+    {
+        "id": 7,
+        "name": "Cancer"
+    },
+    {
+        "id": 8,
+        "name": "Additional Biometrics"
+    }
+]

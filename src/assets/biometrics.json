@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "Fasting Glucose",
+        "description": "25 mg/dL above the recommended level",
+        "value": 151,
+        "unit": "mg/dL",
+        "timeDisplay": "2w",
+        "actionLabel": "Take Action",
+        "categoryId": 1,
+        "addlWarning": "Critical"
+    },
+    {
+        "id": 2,
+        "name": "Triglycerides",
+        "description": "19 mg/dL above the recommended level",
+        "value": 519,
+        "unit": "mg/dL",
+        "timeDisplay": "1m",
+        "actionLabel": "Take Action",
+        "categoryId": 1,
+        "addlWarning": "Concern"
+    },
+    {
+        "id": 3,
+        "name": "Existing Heart Disease",
+        "description": "You reported that you've been diagnosed with some form of heart disease.",
+        "timeDisplay": "1m",
+        "actionLabel": "Take Action",
+        "categoryId": 1,
+        "addlWarning": "Concern"
+    },
+    {
+        "id": 4,
+        "name": "BMI - Obesity",
+        "description": "6.1 above the recommended level",
+        "value": 31.1,
+        "timeDisplay": "2w",
+        "actionLabel": "Take Action",
+        "categoryId": 2,
+        "addlWarning": "Concern"
+    },
+    {
+        "id": 5,
+        "name": "Waist Circumference",
+        "description": "Your waist circumference may lead to higher risk of certain chronic conditions.",
+        "timeDisplay": "1m",
+        "actionLabel": "Take Action",
+        "categoryId": 2,
+        "addlWarning": "Stuff To Watch"
+    }
+]
