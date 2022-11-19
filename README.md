@@ -37,8 +37,9 @@ Mostly renders whatever entry from `biometrics.json` it's given. It also does so
 
 Initially, I tried to derive the `intensity` field entirely from the json fields in the PDF. I planned on extracting the number from each description and setting arbitrary breakpoints for how far off the number was from the recommended level (20+ above the rec. level: *Critical*, 5+ above the rec. level, *Concern*, etc.).
 In the end, there were too many unknowns:
-    * Waist Circumference and Existing Heart Disease from the example both don't have a number in their descriptions, but they have different Intensities
-    * Card values can have different units. A difference of 20 can be a huge deal or a minor issue depending on the units used!
+* Waist Circumference and Existing Heart Disease from the example both don't have a number in their descriptions, but they have different Intensities
+* Card values can have different units. A difference of 20 can be a huge deal or a minor issue depending on the units used!
+
 With that in mind, adding a new field made the most sense.
 
 
