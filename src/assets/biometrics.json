@@ -48,5 +48,14 @@
         "actionLabel": "Take Action",
         "categoryId": 2,
         "addlWarning": "Stuff To Watch"
+    },
+    {
+        "id": 5,
+        "name": "Smoking",
+        "description": "You don't smoke. That's good!",
+        "timeDisplay": "1m",
+        "actionLabel": "Take Action",
+        "categoryId": 4,
+        "addlWarning": "Good"
     }
 ]

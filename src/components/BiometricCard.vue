@@ -71,7 +71,7 @@ class Biometric {
       */
       this.addlWarning = json.addlWarning
       // find the first number (float or otherwise) in the description.
-      const numberMatch:RegExpMatchArray|null = this.description.match('[0-9.]+ ')
+      const numberMatch:RegExpMatchArray|null = this.description.match('^[0-9.]+ ')
       if (numberMatch) {
         this.recommendedLevelDiff = parseFloat(numberMatch[0])
         this.description = this.description.replace(numberMatch[0], '')
