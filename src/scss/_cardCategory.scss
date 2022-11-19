@@ -2,6 +2,9 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    @media only screen and (max-width: $max-app-width) {
+        justify-content: center;
+    }
     padding-bottom: 3%;
     .category-header {
         width: 100%;
@@ -9,6 +12,10 @@
         flex-flow: row wrap;
         align-items: center;
         justify-content: flex-start;
+        @media only screen and (max-width: $max-app-width) {
+            // aligns header to the left edge of the first bio card on small screens.
+            width: 375px;
+        }
         .category-name {
             margin-right: 2%;
             color: $color-blue;
