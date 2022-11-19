@@ -14,6 +14,11 @@ npm run serve
 ## Summary
 This was my first time using Vue, but I already had a bit of react/typescript experience, mostly from creating WordPress Gutenberg/BB blocks.
 
+Everything in this SPA should match the screenshot very closely. The things I'm not completely confident about are:
+* Fonts - I'm just using the default Vue ones.
+* Colors/palette - I used an eyedropper to try to get rgb values that are as close as possible, but stuff like gradients might not be exact.
+* Dimensions - I assumed a max width of 786px, which is kind of standard for mobile-first projects.
+
 ## Components
 ### JSON
 All content on the page is generated from the 2 json files in `/src/assets`:
@@ -47,6 +52,7 @@ With that in mind, adding a new field made the most sense.
 * Category List
     * Clicking a category at the top could scroll you to the Category on the page.
     * Alternatively, you could only show one category at a time and clicking on a category in the list would show that category.
+        * Could be fun to change categories by swiping on mobile.
 * Load More button
     * Could cap the number of displayed cards/category at 2 or 4, then clicking would show more/all of them.
         * You'd also want to sort the cards by severity so that the important stuff always comes first.
